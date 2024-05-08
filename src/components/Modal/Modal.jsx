@@ -1,6 +1,6 @@
 import styles from "./modal.module.css";
-import Image from "next/image";
-import { ArrowLeft } from "phosphor-icons";
+import Image from "next/image"; 
+import { ArrowLeft } from "@phosphor-icons/react";
 
 export const Modal = ({
     imagePath,
