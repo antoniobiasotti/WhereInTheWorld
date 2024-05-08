@@ -1,5 +1,5 @@
 // essa página será renderizada do lado do cliente
-"use client";
+// "use client";
 /*
 3 formas de renderizar aplicações com Next: 
 dinamica no server
@@ -9,38 +9,58 @@ direto no navegador
 
 import { useState, useEffect } from "react";
 
-import styles from "./page.module.css";
 import { Card } from "@/components/Card/Card";
 import { Modal } from "@/components/Modal/Modal";
+import { Header } from "@/components/Header/Header";
 
 export default function Home() {
-  const [countries, setCountries] = useState([]);
+  // const [countries, setCountries] = useState([]);
 
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  // const [selectedCountry, setSelectedCountry] = useState(null);
 
   
-  // Montar o objeto, passar o segundo parâmetro como vazio
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch("/api/country", { cache: "no-store" });
-      const data = await response.json();
-      setCountries(data);
-    }
-    fetchData();
-  }, []);
+  // // Montar o objeto, passar o segundo parâmetro como vazio
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await fetch("/api/country", { cache: "no-store" });
+  //     const data = await response.json();
+  //     setCountries(data);
+  //   }
+  //   fetchData();
+  // }, []);
 
-  const openModal = (country) => { 
-    setSelectedCountry(country); // "Avisa" a home qual o país selecionado pelo useState
-  };
+  // const openModal = (country) => { 
+  //   setSelectedCountry(country); // "Avisa" a home qual o país selecionado pelo useState
+  // };
 
-  const closeModal = () => {
-    setSelectedCountry(null); // Limpa o país selecionado
-  }
+  // const closeModal = () => {
+  //   setSelectedCountry(null); // Limpa o país selecionado
+  // }
+
+  /* 
+  
+  .main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+  */
 
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        {countries.map((country, index) => {
+    <main className="w-screen flex flex-wrap justify-center mt-14">
+      <Header/>
+      <div className="flex justify-center gap-14 mt-14">
+        {/* {countries.map((country, index) => {
           return (
             <Card
               imagePath={country.flag}
@@ -56,9 +76,9 @@ export default function Home() {
               openModal={() => openModal(country)} //callback function -> chama a openModal para setar o país clickado, ou seja, diferente de nulo
             />
             )
-          })}
+          })} */}
       </div>
-      {selectedCountry && (
+      {/* {selectedCountry && (
             <Modal
               imagePath={selectedCountry.flag}
               name={selectedCountry.name}
@@ -71,7 +91,7 @@ export default function Home() {
               code={selectedCountry.code}
               closeModal={() => closeModal()}
             />
-      )}
+      )} */}
     </main>
   );
 }
