@@ -9,8 +9,8 @@ direto no navegador
 
 import { useState, useEffect } from "react";
 
-import { Card } from "@/components/Card/Card";
-import { Modal } from "@/components/Modal/Modal";
+import { Card } from "@/app/components/Card/Card";
+import { Modal } from "@/app/components/Modal/Modal";
 import { Header } from "@/components/Header/Header";
 
 export default function Home() {
@@ -57,7 +57,7 @@ export default function Home() {
   */
 
   return (
-    <main className="w-screen flex flex-wrap justify-center mt-14">
+    <main className="text-cyan-300">
       <Header/>
       <div className="flex justify-center gap-14 mt-14">
         {/* {countries.map((country, index) => {

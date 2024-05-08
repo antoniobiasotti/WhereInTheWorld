@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-export  function Header() {
+export function Header() {
   return (
-    <header className="flex justify-between bg-slate-600">
-      <h1 className="text-cyan-300">Where in the world?</h1>
-      <div className="">
+    <header className="flex w-full justify-between border-2 border-cyan-100">
+      <span>Where in the World?</span>
+      <div>
         <Image src="/lua.svg" width={15} height={15} alt="Lua" />
-        <span className="cursor-pointer">Dark Mode</span>
+        <span>Dark Mode</span>
       </div>
     </header>
   );
