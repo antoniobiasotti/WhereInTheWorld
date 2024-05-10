@@ -2,12 +2,9 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="flex w-full justify-between border-2 border-cyan-100">
-      <span>Where in the World?</span>
-      <div>
-        <Image src="/lua.svg" width={15} height={15} alt="Lua" />
-        <span>Dark Mode</span>
-      </div>
+    <header className="flex justify-between items-center gap-4 border-2 p-6 text-2xl text-white">
+      <p>Where In the World</p>
+      <p>Dark Mode</p>
     </header>
   );
 };

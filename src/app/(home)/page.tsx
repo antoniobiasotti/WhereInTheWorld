@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 
 import { Card } from "@/app/components/Card/Card";
 import { Modal } from "@/app/components/Modal/Modal";
-import { Header } from "@/components/Header/Header";
+import { Header } from "@/app/components/Header/Header";
 
 export default function Home() {
   // const [countries, setCountries] = useState([]);
@@ -57,41 +57,41 @@ export default function Home() {
   */
 
   return (
-    <main className="text-cyan-300">
-      <Header/>
-      <div className="flex justify-center gap-14 mt-14">
-        {/* {countries.map((country, index) => {
-          return (
-            <Card
-              imagePath={country.flag}
-              name={country.name}
-              population={country.population}
-              region={country.region}
-              subregion={country.subregion}
-              capital={country.capital}
-              topleveldomain={country.topLevelDomain}
-              flag={country.flag}
-              code={country.code}
-              key={index}
-              openModal={() => openModal(country)} //callback function -> chama a openModal para setar o país clickado, ou seja, diferente de nulo
-            />
-            )
-          })} */}
+      <div className="bg-slate-600">
+        <Header/>
+        {/* <div className="flex justify-center gap-14 mt-14">
+          {countries.map((country, index) => {
+            return (
+              <Card
+                imagePath={country.flag}
+                name={country.name}
+                population={country.population}
+                region={country.region}
+                subregion={country.subregion}
+                capital={country.capital}
+                topleveldomain={country.topLevelDomain}
+                flag={country.flag}
+                code={country.code}
+                key={index}
+                openModal={() => openModal(country)} //callback function -> chama a openModal para setar o país clickado, ou seja, diferente de nulo
+              />
+              )
+            })}
+        </div>
+        {selectedCountry && (
+              <Modal
+                imagePath={selectedCountry.flag}
+                name={selectedCountry.name}
+                population={selectedCountry.population}
+                region={selectedCountry.region}
+                subregion={selectedCountry.subregion}
+                capital={selectedCountry.capital}
+                topleveldomain={selectedCountry.topLevelDomain}
+                flag={selectedCountry.flag}
+                code={selectedCountry.code}
+                closeModal={() => closeModal()}
+              />
+        )} */}
       </div>
-      {/* {selectedCountry && (
-            <Modal
-              imagePath={selectedCountry.flag}
-              name={selectedCountry.name}
-              population={selectedCountry.population}
-              region={selectedCountry.region}
-              subregion={selectedCountry.subregion}
-              capital={selectedCountry.capital}
-              topleveldomain={selectedCountry.topLevelDomain}
-              flag={selectedCountry.flag}
-              code={selectedCountry.code}
-              closeModal={() => closeModal()}
-            />
-      )} */}
-    </main>
   );
 }
