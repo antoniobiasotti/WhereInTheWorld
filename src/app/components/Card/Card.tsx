@@ -12,16 +12,14 @@ export const Card = ({
   openModal,
 }) => {
   return (
-    <div className={styles.container} onClick={openModal}>
-      <div className={styles.image}>
+    <div className="flex flex-col border-2 border-white" onClick={openModal}>
         <Image
           src={imagePath}
           width={264}
-          height={160}
+          height={60}
           alt="flag"
-          className={styles.img}
+          className="cursor-pointer"
         />
-      </div>
       <div className={styles.text}>
         <h2 className={styles.h2}>{country}</h2>
         <div className={styles.info}>
