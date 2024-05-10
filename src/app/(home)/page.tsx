@@ -38,10 +38,10 @@ export default function Home() {
   }
 
   return (
-      <div className="bg-slate-600">
+      <div>
         <Header/>
-        <main className="px-4 border-2 border-white">
-          <div className="grid justify-center gap-14 mt-10 grid-cols-3">
+        <main className="mt-8 px-8 py-8 border-2 border-white">
+          <div className="grid justify-center gap-14 grid-cols-3">
             {countries.map((country, index) => {
               return (
                 <Card

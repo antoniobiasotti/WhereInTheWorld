@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="flex justify-between items-center gap-4 border-2 p-6 text-2xl text-white">
+    <header className="flex justify-between items-center gap-4 border-b-2 p-6 text-2xl text-white">
       <p>Where in the World ?</p>
       <div className="flex gap-2 cursor-pointer">
         <Image src="/lua.svg" width={24} height={24} alt="" />
